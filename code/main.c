@@ -1,14 +1,14 @@
+// main.c
 #include <stdlib.h>
 #include <windows.h>
 #include "list_adapters.h"
 #include "menu.h"
+#include "select_adapter.h"
+#include "capture.h"
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
-    
+    SetConsoleOutputCP(CP_UTF8);   
     int choice;
-    
-    printf("Сетевой анализатор\n");
     
     while (1) {
         show_menu();
@@ -19,12 +19,21 @@ int main() {
                 system("cls");
                 list_network_adapters();
                 break;
+            case 2:
+                system("cls");
+                select_adapter();
+                break;
+            case 3:
+                system("cls");
+                printf("Здесь будет функция захвата пакетов\n");
+                // start_capture(get_selected_device());
+                break;
             case 0:
+                system("cls");
                 printf("\nВыход.\n");
-                system("pause");
                 return 0;
             default:
-                printf("\nНеверный выбор. Используйте 0 или 1.\n");
+                printf("\nНеверный выбор. Используйте 0-3.\n");
                 break;
         }
         
