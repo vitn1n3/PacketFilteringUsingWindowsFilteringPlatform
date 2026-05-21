@@ -1,6 +1,6 @@
 // menu/menu.c
 #include <stdio.h>
-#include "menu.h"
+#include "menu/menu.h"
 
 void clear_input_buffer() {
     int c;

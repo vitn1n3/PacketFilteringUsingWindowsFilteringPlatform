@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <pcap.h>
-#include "select_adapter.h"
-#include "menu.h"
+#include "select_adapter/select_adapter.h"
+#include "menu/menu.h"
 
 static char selected_device[256] = "";
 

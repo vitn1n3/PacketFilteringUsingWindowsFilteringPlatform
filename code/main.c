@@ -1,10 +1,10 @@
 // main.c
 #include <stdlib.h>
 #include <windows.h>
-#include "list_adapters.h"
-#include "menu.h"
-#include "select_adapter.h"
-#include "capture.h"
+#include "list_adapters/list_adapters.h"
+#include "menu/menu.h"
+#include "select_adapter/select_adapter.h"
+#include "capture/capture.h"
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);   
@@ -25,8 +25,7 @@ int main() {
                 break;
             case 3:
                 system("cls");
-                printf("Здесь будет функция захвата пакетов\n");
-                // start_capture(get_selected_device());
+                start_capture(get_selected_device());
                 break;
             case 0:
                 system("cls");
